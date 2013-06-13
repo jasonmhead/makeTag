@@ -6,7 +6,6 @@ function makeTag(tag,tContent,tID,tClass,tValue,tAlt,tOther){
 		for(var i=0; i<arguments.length; i++) {
 			if(i > 1 && i < 6 && arguments[i] != undefined && arguments[i] != ''){
 				tagAttributes += tagAttributeNames[i]+'="'+arguments[i]+'" ';
-alert(i+' :: '+tagAttributeNames[i]+' :: '+arguments[i]);
 			}
   		}
 
