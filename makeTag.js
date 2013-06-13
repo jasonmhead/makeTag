@@ -10,10 +10,14 @@ alert(i+' :: '+tagAttributeNames[i]+' :: '+arguments[i]);
 			}
   		}
 
+		if(tOther == undefined){ // don't insert undefined
+			tOther = '';
+		}
+
 		if(tContent == undefined || tContent == ''){ // is this tag self-closing?
-			tagOutput = '<'+tag+' '+tagAttributes+' />';
+			tagOutput = '<'+tag+' '+tagAttributes+' '+tOther+' />';
 		}else{
-			tagOutput = '<'+tag+' '+tagAttributes+'>'+tContent+'</'+tag+'>';
+			tagOutput = '<'+tag+' '+tagAttributes+' '+tOther+'>'+tContent+'</'+tag+'>';
 		}
 
 	return tagOutput;
