@@ -1,6 +1,6 @@
 function makeTag(tag,tContent,tID,tClass,tValue,tAlt,tOther){
 	var tagAttributeNames = [];
-	var tagOutput;
+	var tagAttributes, tagOutput;
 	
 	tagAttributeNames = ['','','id','class','value','alt'];
 	
