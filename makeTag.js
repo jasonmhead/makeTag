@@ -11,7 +11,7 @@ function makeTag(tag,tContent,tID,tClass,tValue,tAlt,tOther){
   		}
 	
 		if(tContent == undefined || tContent == ''){ // is this tag self-closing?
-			tagOutput = '<'+tag+' '+tagAttributes+' />;
+			tagOutput = '<'+tag+' '+tagAttributes+' />';
 		}else{
 			tagOutput = '<'+tag+' '+tagAttributes+'>'+tContent+'</'+tag+'>';
 		}
