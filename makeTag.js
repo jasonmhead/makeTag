@@ -1,12 +1,20 @@
-function makeTag(tag,content,tID,tClass){
-	if(tID == undefined){
-		tID = '';
-	}
-	if(tClass == undefined){
-		tClass = '';
-	}
+function makeTag(tag,tContent,tID,tClass,tValue,tAlt,tOther){
+	var tagAttributeNames = [];
+	var tagOutput;
 	
-	var tagOutput = '<'+tag+' id="'+tID+'" class="'+tClass+'">'+content+'</'+tag+'>';
+	tagAttributeNames = ['','','id','class','value','alt'];
+	
+		for(var i=0; i<arguments.length; i++) {
+			if(i > 1 && i < 6 && arguments[i] != undefined){
+				tagAttributes += tagAttributeNames+' "'+arguments[i]+'" ';
+			}
+  		}
+	
+		if(tContent == undefined){ // is this tag self-closing?
+			tagOutput = '<'+tag+' '+tagAttributes+' />;
+		}else{
+			tagOutput = '<'+tag+' '+tagAttributes+'>'+tContent+'</'+tag+'>';
+		}
+
 	return tagOutput;
-	
 }
